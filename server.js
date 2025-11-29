@@ -46,8 +46,9 @@ io.on("connection", (socket) => {
   });
 });
 
+const PORT = process.env.PORT || 8080;
 
-// --- START SERVER ---
-server.listen(8080, () => {
-  console.log("Backend running on http://localhost:8080");
+server.listen(PORT, () => {
+  console.log("Backend running on port " + PORT);
 });
+
